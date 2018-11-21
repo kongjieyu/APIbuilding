@@ -20,7 +20,7 @@ exports.products_get_all = (req, res, next) => {
                         request: {
                             type: 'GET',
                             description: 'Get all products',
-                            url: 'http://localhost:3000/products/' + doc._id
+                            url: 'https://toyapi.azurewebsites.net/products/' + doc._id
                         }
                     }
                 }
@@ -60,7 +60,7 @@ exports.products_create_product = (req, res, next) => {
             url: {
                 request: {
                     type: 'POST',
-                    url: 'http://localhost:3000/products/' + result._id
+                    url: 'https://toyapi.azurewebsites.net/products/' + result._id
                 }
             }
         }
@@ -80,7 +80,7 @@ exports.products_get_product = (req, res, next) => {
                 product: doc,
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:3000/products/' + doc._id
+                    url: 'https://toyapi.azurewebsites.net/products/' + doc._id
                 }
             });
         } else {
@@ -108,7 +108,7 @@ exports.products_update_product = (req, res, next) => {
             message: 'Product updated',
             request: {
                     type: 'Patch',
-                    url: 'http://localhost:3000/products/' + id
+                    url: 'https://toyapi.azurewebsites.net/products/' + id
                 }
         });
     })
@@ -127,7 +127,7 @@ exports.products_delete = (req, res, next) => {
             message: 'Product deleted',
             request: {
                     type: 'POST',
-                    url: 'http://localhost:3000/products',
+                    url: 'https://toyapi.azurewebsites.net/products',
                     body: {name: 'String', price: 'Number'}
                 }
         });

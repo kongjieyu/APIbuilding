@@ -17,7 +17,7 @@ exports.orders_get_all = (req, res, next) => {
                         quantity: doc.quantity,
                         request: {
                             type: 'GET',
-                            url: 'http://localhost:3000/orders' + doc._id
+                            url: 'https://toyapi.azurewebsites.net/orders' + doc._id
                         }
                     }
                 })
@@ -57,7 +57,7 @@ exports.orders_create_order = (req, res, next) => {
                         },
                         request: {
                             type: 'GET',
-                            url: 'http://localhost:3000/orders/' + result._id
+                            url: 'https://toyapi.azurewebsites.net/orders/' + result._id
                         }
                     })
                 })
@@ -83,7 +83,7 @@ exports.orders_get_order = (req, res, next) => {
                 order: order,
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:3000/orders'
+                    url: 'https://toyapi.azurewebsites.net/orders'
                 }
             });
         })
@@ -103,7 +103,7 @@ exports.orders_delete_order = (req, res, next) => {
                 message: "Order deleted",
                 request: {
                     type: 'DELETE',
-                    url: 'http://localhost:3000/orders',
+                    url: 'https://toyapi.azurewebsites.net/orders',
                     body: {productId: 'ID', quantity: 'Number'}
                 }
             });

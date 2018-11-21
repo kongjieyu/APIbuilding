@@ -20,7 +20,7 @@ exports.products_get_all = (req, res, next) => {
                         request: {
                             type: 'GET',
                             description: 'Get all products',
-                            url: 'http://localhost:3000/products/' + doc._id
+                            url: 'https://toyapi.azurewebsites.net/products/' + doc._id
                         }
                     }
                 }
